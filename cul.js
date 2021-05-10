@@ -317,6 +317,8 @@ const Cul = function (options) {
         if (options.parse) {
             if (options.rssi) {
                 dataRaw = data.slice(0,-2); // remove RSSI byte
+            } else {
+            	dataRaw = data;
             }
 
             command = dataRaw[0];
